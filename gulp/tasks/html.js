@@ -1,6 +1,7 @@
 import fileinclude from 'gulp-file-include'
 import webpHtml from 'gulp-webp-html-nosvg'
 import versionNumber from 'gulp-version-number'
+import prettier from 'gulp-prettier'
 
 export const html = _ => {
 	return app.gulp
@@ -21,6 +22,7 @@ export const html = _ => {
 				},
 			})
 		)
+		.pipe(prettier())
 		.pipe(app.gulp.dest(app.path.dest.html))
 		.pipe(app.plugins.browserSync.stream())
 }

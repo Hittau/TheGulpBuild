@@ -2,7 +2,7 @@ export const path = {
 	src: {
 		files: './src/files/**/*.*',
 		html: './src/*.html',
-		scss: './src/scss/*.scss',
+		scss: './src/scss/style.scss',
 		js: './src/js/app.js',
 	},
 	dest: {

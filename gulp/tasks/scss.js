@@ -35,7 +35,7 @@ export const scss = _ => {
 				})
 			)
 			// Не сжатый css =>
-			.pipe(app.gulp.dest(app.path.dest.css))
+			// .pipe(app.gulp.dest(app.path.dest.css))
 			.pipe(
 				cleanCss({
 					level: 2,
