@@ -3,6 +3,10 @@ body,
 .wrapper {
    height: 100%;
 }
+body {
+   font-family: $fontFamily;
+   font-size: $fontSize;
+}
 .wrapper {
    position: relative;
    overflow-x: hidden;
@@ -17,6 +21,6 @@ main {
 }
 [class*="__container"] {
    margin: 0 auto;
-   max-width: 1230px;
+   max-width: $containerWidth;
    padding: 0px 15px;
 }
