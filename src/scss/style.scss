@@ -8,11 +8,14 @@
    $emValue: calc($value / 16) + em;
    @return $emValue;
 }
+
+// function adding px prefix
 @function pxValue($value) {
    $pxValue: $value + px;
    @return $pxValue;
 }
 
+// responsive value mixin
 @mixin responsiveValue($property, $firstValue, $secondValue) {
    #{$property}: calc(
       pxValue($secondValue) + ($firstValue - $secondValue) *
@@ -20,26 +23,41 @@
    );
 }
 
+//
+@mixin containerPadding($value) {
+   padding-left: calc($value / 2) + px;
+   padding-right: calc($value / 2) + px;
+}
+
 // import font(s)
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
 
-// default font family
-$fontFamily: "Montserrat", sans-serif;
-
-// default font size
-$fontSize: rem(14);
+// font(s)
+$fontFamily: "Montserrat", sans-serif; // default font family
+$fontSize: rem(14); // default font size
 
 // color(s)
-$mainColor: #000;
+$mainColor: #000; // default color
 
 // template size
 $templateWidth: 1440;
-
 // min width
 $minWidth: 320;
-
 // container size
-$containerWidth: 1230px;
+$containerWidth: 1200;
+// container padding
+$containerPadding: 30; //(по 15 слева и справа)
+
+// font weight
+$thin: 100;
+$extraLight: 200;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semiBold: 600;
+$bold: 700;
+$extraBold: 800;
+$black: 900;
 
 // basic devices sizes (break points)
 $pc: em($containerWidth);
