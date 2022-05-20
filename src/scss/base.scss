@@ -1,3 +1,20 @@
+html,
+body,
+.wrapper {
+   height: 100%;
+}
+.wrapper {
+   position: relative;
+   overflow-x: hidden;
+   display: flex;
+   flex-direction: column;
+   &.scroll-block {
+      overflow-y: hidden;
+   }
+}
+main {
+   flex: auto;
+}
 [class*="__container"] {
    margin: 0 auto;
    max-width: 1230px;
