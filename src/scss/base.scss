@@ -7,7 +7,7 @@ body {
    font-family: $fontFamily;
    font-size: $fontSize;
    font-weight: $regular;
-   color: $mainColor;
+   color: $mainFontColor;
 }
 .wrapper {
    position: relative;
@@ -20,9 +20,4 @@ body {
 }
 main {
    flex: auto;
-}
-[class*="__container"] {
-   margin: 0 auto;
-   max-width: calc($containerWidth + $containerPadding) + px;
-   padding: 0px 15px;
 }
