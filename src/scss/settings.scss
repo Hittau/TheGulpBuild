@@ -1,0 +1,47 @@
+// import font(s)
+// &display=swap&subset=cyrillic-ext
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+// font(s)
+$fontFamily: "Montserrat", sans-serif; // default font family
+$fontSize: rem(16); // default font size
+
+// color(s)
+$mainFontColor: #000; // default font color
+$mainColor: #000;
+
+// template size
+$templateWidth: 1440;
+// min width
+$minWidth: 320;
+// container size
+$containerWidth: 1200;
+// container padding
+$containerPadding: 30; //(по 15 слева и справа)
+// max width container
+$maxWidthContainer: calc($containerWidth + $containerPadding) + px;
+
+// container
+[class*="container"] {
+   margin: 0 auto;
+   max-width: $maxWidthContainer;
+   @include containerPadding($containerPadding);
+}
+
+// font weight
+$thin: 100;
+$extraLight: 200;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semiBold: 600;
+$bold: 700;
+$extraBold: 800;
+$black: 900;
+
+// basic devices sizes (break points)
+$pc: em($containerWidth);
+$tablet: em(991.98);
+$mobile: em(767.98);
+$mobileSm: em(575.98);
+$mobileXs: em(479.98);

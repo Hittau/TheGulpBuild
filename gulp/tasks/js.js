@@ -1,10 +1,16 @@
 import webpack from 'webpack-stream'
 import sourcemaps from 'gulp-sourcemaps'
+import babel from 'gulp-babel'
 
 export const js = _ => {
 	return app.gulp
 		.src(app.path.src.js)
 		.pipe(sourcemaps.init())
+		.pipe(
+			babel({
+				presets: ['@babel/env'],
+			})
+		)
 		.pipe(
 			webpack({
 				mode: 'development',

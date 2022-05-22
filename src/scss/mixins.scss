@@ -1,0 +1,12 @@
+// responsive value mixin
+@mixin responsiveValue($property, $firstValue, $secondValue) {
+   #{$property}: calc(
+      pxValue($secondValue) + ($firstValue - $secondValue) *
+         ((100vw - pxValue($minWidth)) / ($templateWidth - $minWidth))
+   );
+}
+// container padding
+@mixin containerPadding($value) {
+   padding-left: calc($value / 2) + px;
+   padding-right: calc($value / 2) + px;
+}
