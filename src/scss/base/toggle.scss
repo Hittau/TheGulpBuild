@@ -1,0 +1,36 @@
+.toggle {
+   &__invisible {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+      &:checked + .toggle__visible {
+         background: #2196f3;
+         &::before {
+            left: 30px;
+         }
+      }
+   }
+   &__visible {
+      cursor: pointer;
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+      background: #ccc;
+      border-radius: 34px;
+      transition: background 0.3s ease;
+      &::before {
+         content: "";
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         left: 4px;
+         height: 26px;
+         width: 26px;
+         background: #fff;
+         border-radius: 50%;
+         transition: left 0.3s ease;
+      }
+   }
+}
